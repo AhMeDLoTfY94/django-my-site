@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for x in obj %}
+{{x.name}}
+<br>
+{{x.price}}
+<br>
+{% if x.image %}
+
+<img src="{{ x.image.url }}" alt="">
+{% else %}
+<img src="{% static 'image/55.jpg' %}" alt="">
+{% endif %}
+{% endfor %}
+{% endblock %}
